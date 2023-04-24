@@ -60,7 +60,7 @@ body {
   @for $i from 1 through $star-count {
     &:nth-child(#{$i}) {
       --star-tail-length: #{random_range(500em, 750em) / 100};
-      --left-offset: #{random_range(0vw, 12500vw) / 100};
+      --left-offset: #{random_range(0vh, 15000vh) / 100};
       --fall-duration: #{random_range(6000, 12000s) / 1000};
       --fall-delay: #{random_range(0, 10000s) / 1000};
     }

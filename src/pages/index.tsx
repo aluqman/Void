@@ -30,18 +30,22 @@ function Input() {
     }
   }
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
     setText(e.target.value);
+    e.target.style.height = 'auto';
+    e.target.style.height = e.target.scrollHeight + "px"
   }
 
   return (
     <div className="flex w-screen justify-center">
-      <input
+      <textarea
         onKeyDown={handleSpace}
         onChange={handleChange}
         value={text}
         placeholder="type your thoughts away <3"
-        className="input input-bordered bg-transparent w-1/2"
+        className="textarea textarea-bordered bg-transparent w-3/4 h-fit leading-loose resize-none max-h-screen"
+        rows={1}
+        autoFocus
       />
     </div>
   );
