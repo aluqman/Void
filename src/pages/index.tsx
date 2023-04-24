@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   let stars = [];
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 75; i++) {
     const item = <div className="star" key={i}/>
     stars.push(item)
   }
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Title</title>
+        <title>The Thinking Place</title>
       </Head>
       <div className="stars">
         {stars}
