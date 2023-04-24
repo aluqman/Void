@@ -25,7 +25,7 @@ function Input() {
   const [text, setText] = useState("");
 
   function handleSpace(e: React.KeyboardEvent) {
-    if (e.key === " ") {
+    if (e.key === " " || e.key === 'Enter') {
       setText("");
     }
   }

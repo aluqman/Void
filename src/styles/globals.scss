@@ -13,9 +13,10 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
   background: radial-gradient(ellipse at bottom, #1b133f 0%, #000000 100%);
   overflow: hidden;
-  position: relative;
 }
 
 @function random_range($min, $max) {
