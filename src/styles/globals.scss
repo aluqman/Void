@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @mixin sp-layout {
   @media screen and (max-width: 750px) {
     @content;
@@ -20,7 +24,6 @@ body {
 }
 
 .stars {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -46,8 +49,9 @@ body {
   border-radius: 50%;
   filter: drop-shadow(0 0 6px currentColor);
   transform: translate(0, -10em) rotate(-70deg);
-  animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
-  
+  animation: fall var(--fall-duration) var(--fall-delay) linear infinite,
+    tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+
   @include sp-layout {
     // For mobile performance, tail-fade animation will be removed QAQ
     animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
@@ -62,9 +66,10 @@ body {
     }
   }
 
-  &::before, &::after {
+  &::before,
+  &::after {
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     left: calc(var(--star-width) / -2);
     width: var(--star-width);
@@ -90,12 +95,14 @@ body {
 }
 
 @keyframes tail-fade {
-  0%, 50% {
+  0%,
+  50% {
     width: var(--star-tail-length);
     opacity: 1;
   }
 
-  70%, 80% {
+  70%,
+  80% {
     width: 0;
     opacity: 0.4;
   }
