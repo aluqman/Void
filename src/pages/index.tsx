@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden touch-none">
+    <div className="overflow-hidden">
       <Head>
         <title>The Thinking Place</title>
       </Head>
