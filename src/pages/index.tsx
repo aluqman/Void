@@ -1,23 +1,31 @@
-import Head from 'next/head';
-import { Inter } from 'next/font/google';
+import Head from "next/head";
+import { Inter } from "next/font/google";
+import { fileURLToPath } from "url";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  let stars = [];
-  for (let i = 0; i < 75; i++) {
-    const item = <div className="star" key={i}/>
-    stars.push(item)
-  }
-
   return (
-    <>
+    <div>
       <Head>
         <title>The Thinking Place</title>
       </Head>
-      <div className="stars">
-        {stars}
-      </div>
-    </>
-  )
+      <Input />
+      <Stars />
+    </div>
+  );
 }
+
+const Stars = () => (
+  <div className="stars">
+    {Array.from({ length: 75 }, (_, i) => (
+      <div className="star" key={i} />
+    ))}
+  </div>
+);
+
+const Input = () => (
+  <div className="flex w-screen justify-center">
+    <input placeholder="type your thoughts away <3" className="input input-bordered bg-transparent w-1/2"/>
+  </div>
+)
