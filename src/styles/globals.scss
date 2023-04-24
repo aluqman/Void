@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   background: radial-gradient(ellipse at bottom, #1b133f 0%, #000000 100%);
   overflow: hidden;
+  position: relative;
 }
 
 @function random_range($min, $max) {
