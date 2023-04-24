@@ -6,7 +6,6 @@ export default function Home() {
     <div className="overflow-hidden touch-none">
       <Head>
         <title>The Thinking Place</title>
-        <meta name="viewport" content="user-scalable=no" />
       </Head>
       <Input />
       <Stars />
