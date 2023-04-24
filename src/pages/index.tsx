@@ -25,8 +25,9 @@ function Input() {
   const [text, setText] = useState("");
 
   function handleSpace(e: React.KeyboardEvent) {
-    if (e.key === " " || e.key === "Enter") {
+    if (e.key === "Enter") {
       setText("");
+      e.preventDefault()
     }
   }
 
@@ -39,13 +40,13 @@ function Input() {
   return (
     <div className="flex w-screen justify-center">
       <textarea
-        onKeyDown={handleSpace}
         onChange={handleChange}
+        onKeyDown={handleSpace}
         value={text}
         placeholder="type your thoughts away <3"
         className="textarea textarea-bordered bg-transparent w-3/4 h-fit leading-loose resize-none max-h-screen text-base"
         rows={1}
-        autoFocus
+        autoFocus={true}
       />
     </div>
   );
